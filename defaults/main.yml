@@ -48,7 +48,7 @@ airflow_packages:
   - name: 'Cython'
     version: '0.28.2'
   - name: 'apache-airflow'
-    version: '1.9.0'
+    version: '1.10.10'
   - name: 'pipenv'
 airflow_extra_packages:
   - name: 'apache-airflow[crypto]'
@@ -137,7 +137,7 @@ airflow_defaults_config:
     remote_log_conn_id: ''
     encrypt_s3_logs: False
     executor: 'SequentialExecutor'
-    sql_alchemy_conn: "sqlite:///{{ airflow_database_sqlite_file_path }}"
+    sql_alchemy_conn: "mysql://root:root@localhost:3306/airflow"
     sql_alchemy_pool_size: 5
     sql_alchemy_pool_recycle: 3600
     parallelism: 32
