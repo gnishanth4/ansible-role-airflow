@@ -136,7 +136,7 @@ airflow_defaults_config:
     remote_base_log_folder: ''
     remote_log_conn_id: ''
     encrypt_s3_logs: False
-    executor: 'SequentialExecutor'
+    executor: 'LocalExecutor'
     sql_alchemy_conn: "mysql://root:root@localhost:3306/airflow"
     sql_alchemy_pool_size: 5
     sql_alchemy_pool_recycle: 3600
